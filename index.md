@@ -1,22 +1,67 @@
 ---
-
 layout: default
 ---
-
-## Date: 26 February, 2020
-
-| Name      | Balance | Noon | Night | Total |
-| --- | --- | 
-| Ahsan     | 100     | 1 | 1 | 2 |
-| Anwar     | 470     | 1 | 1 | 2 |
-| Jobayer   |  50     | 1 | 0 | 1 |
-| Rashed    | 210     | 1 | 1 | 2 |
-| Shanto    | 000     | 0 | 0 | 0 |
-| Tuhin     |  60     | 1 | 0 | 1 |
-| Raju      |  70     | 1 | 0 | 1 |
-| Milan     | 130     | 0 | 0 | 0 |
-| Mosharraf | 000     | 0 | 0 | 0 |
-| Mainul    |  80     | 1 | 0 | 0 |
-
-----
-
+{% assign meal_counter = 1 %}
+{% for meal in site.data.meals %}
+    <h2 style="color: green;">Date: {{ meal.Date | date: "%b %-d, %Y" }}</h2>
+    <p style="color: green;">Advance Taka: {{ meal.Advance }}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Noon</th>
+                <th>Night</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        </tbody>
+        {% for people in meal.Peoples %}
+            <tr>
+                <td>{{ people.Name }}</td>
+                <td {% if people.Balance <= 70 and meal_counter == 1 %}style="color:red;"{% endif %}>{{ people.Balance }}</td>
+                <td>{{ people.Noon }}</td>
+                <td>{{ people.Night }}</td>
+                <td>{{ people.Noon | plus: people.Night }}</td>
+            </tr>
+        {% endfor %}
+        {% if meal_counter == 1 %}
+            <tr style="background: green;color:lightgreen;font-weight: bold;">
+                <td>Total</td>
+                <td id="totalBalance"></td>
+                <td id="totalNoon"></td>
+                <td id="totalNight"></td>
+                <td id="totalMeal"></td>
+            </tr>
+            {% assign meal_counter = 2 %}
+        {% endif %}
+        </tbody>
+        <tbody>
+    </table>
+    {% if meal_counter == 2 %}
+            <script>
+                console.log(4);
+                var total = [
+                    {% for people in meal.Peoples %}
+                        [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}],
+                    {% endfor %}
+                ];
+                var totalBalance = 0;
+                var totalNoon = 0;
+                var totalNight = 0;
+                var totalMeal = 0;
+                var i;
+                for (i = 0; i < total.length; i++) {
+                    totalBalance += total[i][0];
+                    totalNoon += total[i][1];
+                    totalNight += total[i][2];
+                }
+                document.getElementById("totalBalance").innerHTML = totalBalance;
+                document.getElementById("totalNoon").innerHTML = totalNoon;
+                document.getElementById("totalNight").innerHTML = totalNight;
+                document.getElementById("totalMeal").innerHTML = totalNoon + totalNight;
+            </script>
+            {% assign meal_counter = 3 %}
+        {% endif %}
+    <br><hr>
+{% endfor %}

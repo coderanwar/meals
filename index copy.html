@@ -30,17 +30,7 @@ theme-color: "green"
         {% for people in meal.Peoples %}
             <tr>
                 <td>{{ people.Name }}</td>
-                <td {% if people.Balance < 35 and meal_counter == 1 %}
-                        style="color:red;" 
-                    {% elsif people.Balance < 70 and meal_counter == 1 %}
-                        {% if people.TotalMeal == 2 %}
-                            style="color:red"
-                        {% else %}
-                            style="color:orange"
-                        {% endif %}
-                    {% endif %}>
-                        {{ people.Balance }}
-                </td>
+                <td {% if people.Balance < 35 and meal_counter == 1 %}style="color:red;" {% elsif people.Balance < 70 and meal_counter == 1 %}style="color:orange"{% endif %}>{{ people.Balance }}</td>
                 <td>{{ people.Noon }}</td>
                 <td>{{ people.Night }}</td>
                 <td>{{ people.TotalMeal }}</td>
@@ -87,7 +77,7 @@ theme-color: "green"
             document.getElementById("totalMeal").innerHTML = totalMeal;
 
             totalPayment = (totalMeal * 35) - {{ meal.Advance }} + {{ meal.Due }};
-
+            
             document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
         </script>
         {% assign meal_counter = 3 %}

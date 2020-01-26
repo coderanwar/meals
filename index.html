@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "Home"
-theme-color: "green"
-color: "lightgreen"
+theme-color: "teal"
+color: "white"
 ---
 {% assign meal_counter = 1 %}
 {% for meal in site.data.meals %}
-    <h3 style="color: green;">Date: {{ meal.Date | date: "%b %-d, %Y" }}</h3>
-    <p style="color: green;">
+    <h3 style="color:{{page.theme-color}};">Date: {{ meal.Date | date: "%b %-d, %Y" }}</h3>
+    <p style="color:{{page.theme-color}};">
         <span style="color: green;">Advance: {{ meal.Advance }} | </span> 
         <span style="color: red;">Due: {{ meal.Due }} | </span>
         {% if meal_counter == 1 %}
@@ -52,7 +52,7 @@ color: "lightgreen"
             </tr>
         {% endfor %}
         {% if meal_counter == 1 %}
-            <tr style="background: green;color:lightgreen;font-weight: bold;">
+            <tr style="background: {{page.theme-color}};color: {{page.color}};font-weight: bold;">
                 <td>Total</td>
                 <td id="totalBalance"></td>
                 <td id="totalNoon"></td>

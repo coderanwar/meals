@@ -15,10 +15,10 @@
       Night: 1
       TotalMeal: 2
     - Name: "Jobayer"
-      Balance: 15
+      Balance: 215
       Noon: 1
-      Night: 1
-      TotalMeal: 2
+      Night: 0
+      TotalMeal: 1
     - Name: "Rashed"
       Balance: 140
       Noon: 1

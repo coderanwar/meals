@@ -56,7 +56,7 @@ color: "white"
   for (i = 0; i < total.length; i++) {
     document.getElementById("mealData").innerHTML += '    - Name: "' + total[i][0] + '"\n';
     balance = total[i][1] - (total[i][4] * 35);
-    if (balance > 0) {
+    if (balance >= 0) {
       document.getElementById("mealData").innerHTML += '      Balance: ' + balance + '\n';
     } else {
       document.getElementById("mealData").innerHTML += '      Balance: ' + total[i][1] + '\n';

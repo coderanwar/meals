@@ -51,9 +51,9 @@
       TotalMeal: 2
     - Name: "Mainul"
       Balance: 10
-      Noon: 1
-      Night: 1
-      TotalMeal: 2
+      Noon: 0
+      Night: 0
+      TotalMeal: 0
 
 - Date: 2020-01-26
   Paid: 1000

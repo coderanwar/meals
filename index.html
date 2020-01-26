@@ -6,8 +6,8 @@ color: "white"
 ---
 {% assign meal_counter = 1 %}
 {% for meal in site.data.meals %}
-    <h4 style="color:{{page.theme-color}};font-family: 'Roboto', cursive;">
-        DATE: {{ meal.Date | date: "%b %-d, %Y" | upcase }}
+    <h4 style="color:{{page.theme-color}};">
+        Date: {{ meal.Date | date: "%b %-d, %Y"}}
     </h4>
     <p style="color:{{page.theme-color}};">
         <span style="color: green;">Advance: {{ meal.Advance }} | </span> 

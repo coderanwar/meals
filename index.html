@@ -39,6 +39,8 @@ color: "lightgreen"
                         {% else %}
                             style="color:orange"
                         {% endif %}
+                    {% elsif people.Balance >= 140 and meal_counter == 1 %}
+                        style="color:green"
                     {% endif %}>
                         {{ people.Balance }}
                 </td>

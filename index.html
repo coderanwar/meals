@@ -1,5 +1,7 @@
 ---
 layout: default
+title: "Home"
+theme-color: "green"
 ---
 {% assign meal_counter = 1 %}
 {% for meal in site.data.meals %}
@@ -40,7 +42,6 @@ layout: default
     </table>
     {% if meal_counter == 2 %}
             <script>
-                console.log(4);
                 var total = [
                     {% for people in meal.Peoples %}
                         [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}],

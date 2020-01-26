@@ -36,9 +36,9 @@
       TotalMeal: 1
     - Name: "Raju"
       Balance: 35
-      Noon: 1
+      Noon: 0
       Night: 0
-      TotalMeal: 1
+      TotalMeal: 0
     - Name: "Milan"
       Balance: 95
       Noon: 1

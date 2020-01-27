@@ -50,7 +50,11 @@ color: "white"
                 </td>
                 <td>{{ people.Noon }}</td>
                 <td>{{ people.Night }}</td>
-                <td>{{ people.TotalMeal }}</td>
+                <td {% if people.TotalMeal == 0 %}
+                    style="color:red"
+                {% endif %}>
+                    {{ people.TotalMeal }}
+                </td>
             </tr>
         {% endfor %}
         {% if meal_counter == 1 %}

@@ -78,7 +78,7 @@ color: "white"
         <script>
             var total = [
                 {% for people in meal.Peoples %}
-                    [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ totalMeal }}],
+                    [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ people.Noon | plus: people.Night }}],
                 {% endfor %}
             ];
             var totalBalance = 0;

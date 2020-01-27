@@ -16,7 +16,7 @@ color: "white"
             <span id="payment" style="color:teal;">Payment: |</span>
             <a href="update.html">Update</a>
         {% else %}
-        <span style="color: {{page.theme-color}};">Paid: {{ meal.Paid }} |</span>
+            <span style="color: {{page.theme-color}};">Paid: {{ meal.Paid }} |</span>
         {% endif %}
     </p>
     <table>
@@ -31,10 +31,11 @@ color: "white"
         </thead>
         </tbody>
         {% for people in meal.Peoples %}
+            {% assign totalMeal = people.Noon | plus: people.Night %}
             <tr {% if people.Balance < 35 and meal_counter == 1 %}
                 style="color:red;" 
             {% elsif people.Balance < 70 and meal_counter == 1 %}
-                {% if people.TotalMeal == 2 %}
+                {% if totalMeal == 2 %}
                     style="color:red"
                 {% else %}
                     style="color:orange"
@@ -50,10 +51,10 @@ color: "white"
                 </td>
                 <td>{{ people.Noon }}</td>
                 <td>{{ people.Night }}</td>
-                <td {% if people.TotalMeal == 0 %}
+                <td {% if totalMeal == 0 %}
                     style="color:red"
                 {% endif %}>
-                    {{ people.TotalMeal }}
+                    {{ totalMeal }}
                 </td>
             </tr>
         {% endfor %}
@@ -77,7 +78,7 @@ color: "white"
         <script>
             var total = [
                 {% for people in meal.Peoples %}
-                    [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ people.TotalMeal }}],
+                    [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ people.Noon | plus: people.Night }}],
                 {% endfor %}
             ];
             var totalBalance = 0;

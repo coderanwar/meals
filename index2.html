@@ -1,0 +1,108 @@
+---
+layout: default
+title: "Home"
+theme-color: "teal"
+color: "white"
+---
+{% assign meal_counter = 1 %}
+{% for meal in site.data.meals %}
+    <h4 style="color:{{page.theme-color}};">
+        Date: {{ meal.Date | date: "%b %-d, %Y"}}
+    </h4>
+    <p style="color:{{page.theme-color}};">
+        <span style="color: {{page.theme-color}};">Advance: {{ meal.Advance }} | </span> 
+        <span style="color: red;">Due: {{ meal.Due }} | </span>
+        {% if meal_counter == 1 %}
+            <span id="payment" style="color:teal;">Payment: |</span>
+            <a href="update.html">Update</a>
+        {% else %}
+            <span style="color: {{page.theme-color}};">Paid: {{ meal.Paid }} |</span>
+        {% endif %}
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Noon</th>
+                <th>Night</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        </tbody>
+        {% for people in meal.Peoples %}
+            {% assign totalMeal = people.Noon | plus: people.Night %}
+            <tr {% if people.Balance < 35 and meal_counter == 1 %}
+                style="color:red;" 
+            {% elsif people.Balance < 70 and meal_counter == 1 %}
+                {% if totalMeal == 2 %}
+                    style="color:red"
+                {% else %}
+                    style="color:orange"
+                {% endif %}
+            {% elsif people.Balance >= 140 and meal_counter == 1 %}
+                style="color: {{page.theme-color}}"
+            {% else %}
+                style=""
+            {% endif %}>
+                <td>{{ people.Name }}</td>
+                <td>
+                    {{ people.Balance }}
+                </td>
+                <td>{{ people.Noon }}</td>
+                <td>{{ people.Night }}</td>
+                <td {% if totalMeal == 0 %}
+                    style="color:red"
+                {% endif %}>
+                    {{ totalMeal }}
+                </td>
+            </tr>
+        {% endfor %}
+        {% if meal_counter == 1 %}
+            <tr style="background: {{page.theme-color}};color: {{page.color}};font-weight: bold;">
+                <td>Total</td>
+                <td id="totalBalance"></td>
+                <td id="totalNoon"></td>
+                <td id="totalNight"></td>
+                <td id="totalMeal"></td>
+            </tr>
+            {% assign meal_counter = 2 %}
+        {% endif %}
+        </tbody>
+        <tbody>
+    </table>
+    {% if meal_counter == 2 %}
+       <p>Updated At: {{ site.time }} | <a href="https://github.com/coderanwar/meals/blob/master/_data/meals.yml">Data</a></p>
+    {% endif %}
+    {% if meal_counter == 2 %}
+        <script>
+            var total = [
+                {% for people in meal.Peoples %}
+                    [{{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ totalMeal }}],
+                {% endfor %}
+            ];
+            var totalBalance = 0;
+            var totalNoon = 0;
+            var totalNight = 0;
+            var totalMeal = 0;
+            var totalPayment;
+            var i;
+            for (i = 0; i < total.length; i++) {
+                totalBalance += total[i][0];
+                totalNoon += total[i][1];
+                totalNight += total[i][2];
+                totalMeal += total[i][3];
+            }
+            document.getElementById("totalBalance").innerHTML = totalBalance;
+            document.getElementById("totalNoon").innerHTML = totalNoon;
+            document.getElementById("totalNight").innerHTML = totalNight;
+            document.getElementById("totalMeal").innerHTML = totalMeal;
+
+            totalPayment = (totalMeal * 35) - {{ meal.Advance }} + {{ meal.Due }};
+
+            document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
+        </script>
+        {% assign meal_counter = 3 %}
+    {% endif %}
+    <br><hr>
+{% endfor %}

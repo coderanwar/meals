@@ -18,7 +18,7 @@ color: "white"
 <script>
   var total = [
       {% for people in site.data.meals[0].Peoples %}
-          ["{{people.Name }}", {{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ people.TotalMeal }}],
+          ["{{people.Name }}", {{people.Balance }}, {{ people.Noon }}, {{ people.Night }}, {{ people.Noon | plus: people.Night }}],
       {% endfor %}
   ];
   var totalBalance = 0;
@@ -68,7 +68,6 @@ color: "white"
     }
     document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
     document.getElementById("mealData").innerHTML += '      Night: ' + total[i][3] + '\n';
-    document.getElementById("mealData").innerHTML += '      TotalMeal: ' + total[i][4] + '\n';
   }
 
 </script>

@@ -36,7 +36,12 @@ color: "white"
   totalPayment = (totalMeal * 35) - {{ site.data.meals[0].Advance }} + {{ site.data.meals[0].Due }};
   paid = {{ site.data.meals[0].Paid }} ;
 
-  if (paid > totalPayment) {
+  if (totalPayment <= 0) {
+    document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
+    '  Advance: ' + (-totalPayment) + '\n' +
+    '  Due: {{ site.data.meals[0].Due }} \n' +
+    '  Peoples:\n';
+  } else if (paid > totalPayment) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
     '  Advance: ' + (paid - totalPayment) + '\n' +
     '  Due: {{ site.data.meals[0].Due }} \n' +

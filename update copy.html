@@ -30,7 +30,7 @@ color: "white"
   var text = "";
 
   for (i = 0; i < total.length; i++) {
-    //balance = total[i][1] - (total[i][4] * 35);
+    balance = total[i][1] - (total[i][4] * 35);
     totalMeal += total[i][4];
   }
   totalPayment = (totalMeal * 35) - {{ site.data.meals[0].Advance }} + {{ site.data.meals[0].Due }};
@@ -66,23 +66,13 @@ color: "white"
   for (i = 0; i < total.length; i++) {
     document.getElementById("mealData").innerHTML += '    - Name: "' + total[i][0] + '"\n';
     balance = total[i][1] - (total[i][4] * 35);
-    /*if (balance >= 0) {
+    if (balance >= 0) {
       document.getElementById("mealData").innerHTML += '      Balance: ' + balance + '\n';
     } else {
       document.getElementById("mealData").innerHTML += '      Balance: ' + total[i][1] + '\n';
-    }*/
-    document.getElementById("mealData").innerHTML += '      Balance: ' + balance + '\n';
-    
-    if (total[i][4] == 0 || balance < 35) {
-      document.getElementById("mealData").innerHTML += '      Noon: 0\n';
-      document.getElementById("mealData").innerHTML += '      Night: 0\n';
-    } else if (total[i][4] == 2 && balance < 70) {
-      document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
-      document.getElementById("mealData").innerHTML += '      Night: 0\n';
-    } else if (balance >= 70) {
-      document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
-      document.getElementById("mealData").innerHTML += '      Night: ' + total[i][3] + '\n';
     }
+    document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
+    document.getElementById("mealData").innerHTML += '      Night: ' + total[i][3] + '\n';
   }
 
 </script>

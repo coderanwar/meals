@@ -1,4 +1,4 @@
-const copyToClipboard = elementId => {
+const copyToClipboard = (copyBtn, elementId) => {
     const str = document.getElementById(elementId).innerText;
     const el = document.createElement('textarea');  // Create a <textarea> element
     el.value = str;                                 // Set its value to the string that you want copied
@@ -16,5 +16,11 @@ const copyToClipboard = elementId => {
     if (selected) {                                 // If a selection existed before copying
       document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
       document.getSelection().addRange(selected);   // Restore the original selection
+    }
+
+    if (copyBtn.innerText == "Copied") {
+        copyBtn.innerText = "Copy";
+    } else {
+        copyBtn.innerText = "Copied";
     }
   };

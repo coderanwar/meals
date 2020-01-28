@@ -32,6 +32,7 @@ github_username:  w3cp
 sass:
     sass_dir: _sass
 theme-color: teal
+tooltip-text: Text copied
 
 # Build settings
 theme: 

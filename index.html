@@ -81,7 +81,9 @@ color: "white"
         <p>Updated At: {{ site.time }} | <a href="https://github.com/coderanwar/meals/blob/master/_data/meals.yml">Data</a></p>
         <div class="info">
             <h4 style="color: {{ page.theme-color }};display:inline;">Meal info: </h4>
-            <button class="copy-btn" onclick='copyToClipboard("message")'>Copy</button>
+            <button class="copy-btn" onclick='copyToClipboard(this, "message")'>
+                Copy
+            </button>
             <p id="message" style="color:{{page.theme-color}};">
                 {{ meal.Date | date: "%b %-d, %Y"}}<br>
                 Hazi Mess, Laxmipur<br>

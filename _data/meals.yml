@@ -33,16 +33,16 @@
       Noon: 0
       Night: 0
     - Name: "Rashed"
-      Balance: 0
-      Noon: 0
-      Night: 0
+      Balance: 500
+      Noon: 1
+      Night: 1
     - Name: "Shanto"
       Balance: 0
       Noon: 0
       Night: 0
     - Name: "Tuhin"
-      Balance: 155
-      Noon: 1
+      Balance: 105
+      Noon: 0
       Night: 0
 
 - Date: 2020-01-28

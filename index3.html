@@ -9,7 +9,7 @@ color: "white"
     গ্রুপে মেসেজ করুন। অন্যথায় নিম্নে বর্ণিত ডেটা অনুযায়ী ই মিল চালানো হবে।
 </p>
 
-{% assign todays_meal = true %}
+{% assign todays_meal = true %} 
 {% for meal in site.data.meals %}
     <h4 style="color:{{page.theme-color}};">
         Date: {{ meal.Date | date: "%b %-d, %Y"}}

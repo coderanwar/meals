@@ -41,6 +41,11 @@ color: "white"
     '  Advance: ' + (-totalPayment) + '\n' +
     '  Due: {{ site.data.meals[0].Due }} \n' +
     '  Peoples:\n';
+  } else if (paid == totalPayment) {
+    document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
+    '  Advance: 0\n' +
+    '  Due: 0\n' + 
+    '  Peoples:\n';
   } else if (paid > totalPayment) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
     '  Advance: ' + (paid - totalPayment) + '\n' +

@@ -124,6 +124,7 @@ color: "white"
             document.getElementById("message").innerHTML += msg;
         </script>
     {% endif %}
-    <br><hr>
+    <br>
+    <hr style="color: {{ page.theme-color }}>
     {% assign is_todays_meal = 0 %}
 {% endfor %}

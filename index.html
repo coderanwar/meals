@@ -83,7 +83,6 @@ color: "white"
         <p id="message" style="color:{{page.theme-color}};">
             {{ meal.Date | date: "%b %-d, %Y"}}<br>
             Hazi Mess, Laxmipur,<br>
-            Rajshahi.<br>
             Todays meal:<br>
         </p>
         <script>
@@ -114,8 +113,8 @@ color: "white"
 
             document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
             
-            msg = "&nbsp;&nbsp;Noon: " + totalNoon + "<br>" +
-                "&nbsp;&nbsp;Night: " + totalNight + "<br>" + 
+            msg = "Noon: " + totalNoon + "<br>" +
+                "Night: " + totalNight + "<br>" + 
                 "Advance: {{ meal.Advance }} taka<br>" + 
                 "Payment: " + totalPayment + " taka.<br>" + 
                 "Meal details: {{ site.url }}";

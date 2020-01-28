@@ -3,6 +3,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="{{page.theme-color}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
   <style>
     body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, Lohit-Bengali;
@@ -128,52 +130,69 @@
 
     .footer a {color: #fff; padding:0 10px;}
 
-      .glowing-border {
-          border: 2px solid #dadada;
-          border-radius: 7px;
-      }
+    .glowing-border {
+        border: 2px solid #dadada;
+        border-radius: 7px;
+    }
+    
+    .glowing-border:focus { 
+        outline: none;
+        border-color: {{page.theme-color}};
+        box-shadow: 0 0 10px {{page.theme-color}};
+        color: {{page.theme-color}} !important;
+    }
       
-      .glowing-border:focus { 
-          outline: none;
-          border-color: {{page.theme-color}};
-          box-shadow: 0 0 10px {{page.theme-color}};
-          color: {{page.theme-color}} !important;
-      }
-      
-      .scroll-h {
-          overflow: auto;
-          white-space: nowrap;
-      }
-      .marquee-h {
-          -moz-animation: marquee 10s linear infinite;
-          -webkit-animation: marquee 10s linear infinite;
-          animation: marquee 10s linear infinite;
-      }
-      @-moz-keyframes marquee {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
-      }
-      @-webkit-keyframes marquee {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
-      }
-      @keyframes marquee {
-          0% { 
-              -moz-transform: translateX(100%);
-              -webkit-transform: translateX(100%);
-              transform: translateX(100%) 
-          }
-          100% { 
-              -moz-transform: translateX(-100%);
-              -webkit-transform: translateX(-100%);
-              transform: translateX(-100%); 
-          }
-      }
-      .info {
-          border: 2px solid {{page.theme-color}};
-          border-radius: 7px;
-          box-shadow: 0 0 10px {{page.theme-color}};
-          color: {{page.theme-color}} !important;
-      }
+    .scroll-h {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .marquee-h {
+        -moz-animation: marquee 10s linear infinite;
+        -webkit-animation: marquee 10s linear infinite;
+        animation: marquee 10s linear infinite;
+    }
+    @-moz-keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    @-webkit-keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    @keyframes marquee {
+        0% { 
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%) 
+        }
+        100% { 
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); 
+        }
+    }
+
+    .info {
+        border: 2px solid {{page.theme-color}};
+        border-radius: 7px;
+        box-shadow: 0 0 10px {{page.theme-color}};
+        color: {{page.theme-color}} !important;
+    }
+
+    .copy-btn {
+        background-color: {{page.theme-color}};
+        color: {{page.color}};
+        font-weight:bold;
+        border: 2px solid {{page.theme-color}};
+        border-radius: 7px;
+        box-shadow: 0 0 3px {{page.theme-color}};
+        display: inline;
+        float: right;
+    }
+    .copy-btn:hover {
+        background-color: {{page.color}};
+        color: {{page.theme-color}};
+    }
+
   </style>
 </head>

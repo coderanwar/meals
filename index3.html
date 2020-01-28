@@ -9,7 +9,7 @@ color: "white"
     গ্রুপে মেসেজ করুন। অন্যথায় নিম্নে বর্ণিত ডেটা অনুযায়ী ই মিল চালানো হবে।
 </p>
 
-{% assign todays_meal = true %} 
+{% assign is_todays_meal = 1 %}
 {% for meal in site.data.meals %}
     <h4 style="color:{{page.theme-color}};">
         Date: {{ meal.Date | date: "%b %-d, %Y"}}
@@ -17,7 +17,7 @@ color: "white"
     <p style="color:{{page.theme-color}};">
         <span style="color: {{page.theme-color}};">Advance: {{ meal.Advance }} | </span> 
         <span style="color: red;">Due: {{ meal.Due }} | </span>
-        {% if todays_meal == true %}
+        {% if is_todays_meal == 1 %}
             <span id="payment" style="color:teal;">Payment: |</span>
             <a href="update.html">Update</a>
         {% else %}
@@ -37,7 +37,7 @@ color: "white"
         </tbody>
         {% for people in meal.Peoples %}
             {% assign totalMeal = people.Noon | plus: people.Night %}
-            <tr {% if todays_meal == true %}
+            <tr {% if is_todays_meal == 1 %}
                     {% if people.Balance < 35 %}
                         style="color:red;" 
                     {% elsif people.Balance < 70 %}
@@ -65,7 +65,7 @@ color: "white"
                 </td>
             </tr>
         {% endfor %}
-        {% if todays_meal == true %}
+        {% if is_todays_meal == 1 %}
             <tr style="background: {{page.theme-color}};color: {{page.color}};font-weight: bold;">
                 <td>Total</td>
                 <td id="totalBalance"></td>
@@ -77,7 +77,7 @@ color: "white"
         </tbody>
         <tbody>
     </table>
-    {% if todays_meal == true %}
+    {% if is_todays_meal == 1 %}
         <p>Updated At: {{ site.time }} | <a href="https://github.com/coderanwar/meals/blob/master/_data/meals.yml">Data</a></p>
         <script>
             var total = [
@@ -108,5 +108,5 @@ color: "white"
         </script>
     {% endif %}
     <br><hr>
-    {% assign todays_meal = false %}
+    {% assign is_todays_meal = 0 %}
 {% endfor %}

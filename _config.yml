@@ -29,6 +29,8 @@ url: "https://coderanwar.github.io/meals" # the base hostname & protocol for you
 twitter_username: anwar_w3cp
 github_username:  w3cp
 
+theme-color: teal
+
 # Build settings
 theme: 
 plugins:

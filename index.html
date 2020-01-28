@@ -79,12 +79,12 @@ color: "white"
     </table>
     {% if is_todays_meal == true %}
         <p>Updated At: {{ site.time }} | <a href="https://github.com/coderanwar/meals/blob/master/_data/meals.yml">Data</a></p>
+        <h4 style="color: {{ page.theme-color }}">Meal info:</h4>
         <p id="message" style="color:{{page.theme-color}};">
             {{ meal.Date | date: "%b %-d, %Y"}}<br>
             Hazi Mess, Laxmipur,<br>
             Rajshahi.<br>
             Todays meal:<br>
-            <br>
         </p>
         <script>
             var total = [
@@ -114,8 +114,8 @@ color: "white"
 
             document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
             
-            msg = "Noon: " + totalNoon + "<br>" +
-                "Night: " + totalNight + "<br>" + 
+            msg = "  Noon: " + totalNoon + "<br>" +
+                "  Night: " + totalNight + "<br>" + 
                 "Advance: {{ meal.Advance }} taka<br>" + 
                 "Payment: " + totalPayment + " taka.<br>" + 
                 "Meal details: {{ site.url }}";

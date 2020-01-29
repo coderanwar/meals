@@ -5,7 +5,7 @@
   Due: 0
   Peoples:
     - Name: "Ahsan"
-      Balance: 70
+      Balance: 170
       Noon: 1
       Night: 1
     - Name: "Anwar"
@@ -34,7 +34,7 @@
       Night: 0
     - Name: "Rashed"
       Balance: 430
-      Noon: 1
+      Noon: 2
       Night: 1
     - Name: "Shanto"
       Balance: 0

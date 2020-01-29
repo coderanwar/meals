@@ -119,10 +119,14 @@ color: "white"
             document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
             
             msg = "Noon: " + totalNoon + "<br>" +
-                "Night: " + totalNight + "<br>" + 
-                "Advance: {{ meal.Advance }} taka<br>" + 
-                "Due: {{ meal.Due }} taka<br>" + 
-                "Payment: " + totalPayment + " taka.<br>" + 
+                "Night: " + totalNight + "<br>";
+            if ({{ meal.Advance }} > 0) {
+                msg += "Advance: {{ meal.Advance }} taka<br>";
+            }
+            if ({{ meal.Due }} > 0) {
+                msg += "Due: {{ meal.Due }} taka<br>";
+            }
+            msg += "Payment: " + totalPayment + " taka.<br>" + 
                 "Meal details:<br>{{ site.url }}";
                 
             document.getElementById("message").innerHTML += msg;

@@ -86,6 +86,9 @@ color: "white"
     } else if (total[i][4] == 2 && balance < 70) {
       document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
       document.getElementById("mealData").innerHTML += '      Night: 0\n';
+    } else if (total[i][4] == 1 && balance >= 35) {
+      document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
+      document.getElementById("mealData").innerHTML += '      Night: 0\n';
     } else if (balance >= 70) {
       document.getElementById("mealData").innerHTML += '      Noon: ' + total[i][2] + '\n';
       document.getElementById("mealData").innerHTML += '      Night: ' + total[i][3] + '\n';

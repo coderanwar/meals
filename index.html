@@ -18,7 +18,7 @@ color: "white"
         <span style="color: {{page.theme-color}};">Advance: {{ meal.Advance }} | </span> 
         <span style="color: red;">Due: {{ meal.Due }} | </span>
         {% if is_todays_meal == true %}
-            <span id="payment" style="color:teal;">Payment: |</span>
+            <span id="payment" style="color:teal;">Paid: {{ meal.Paid }} | </span>
             <a href="update.html">New</a>
         {% else %}
             <span style="color: {{page.theme-color}};">Paid: {{ meal.Paid }} |</span>
@@ -118,7 +118,9 @@ color: "white"
 
             totalPayment = (totalMeal * 35) - {{ meal.Advance }} + {{ meal.Due }};
 
-            document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
+            if ({{ meal.Paid }} == 0) {
+                document.getElementById("payment").innerHTML = "Payment: " + totalPayment + " | ";
+            }
             
             msg = "Noon: " + totalNoon + "<br>" +
                 "Night: " + totalNight + "<br>";

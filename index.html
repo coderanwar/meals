@@ -19,7 +19,7 @@ color: "white"
         <span style="color: red;">Due: {{ meal.Due }} | </span>
         {% if is_todays_meal == true %}
             <span id="payment" style="color:teal;">Payment: |</span>
-            <a href="update.html">Update</a>
+            <a href="update.html">New</a>
         {% else %}
             <span style="color: {{page.theme-color}};">Paid: {{ meal.Paid }} |</span>
         {% endif %}
@@ -78,7 +78,9 @@ color: "white"
         <tbody>
     </table>
     {% if is_todays_meal == true %}
-        <p>Updated At: {{ site.time }} | <a href="https://github.com/coderanwar/meals/blob/master/_data/meals.yml">Data</a></p>
+        <p>Updated At: {{ site.time }} | 
+            <a href="https://github.com/coderanwar/meals/edit/master/_data/meals.yml">Edit</a>
+        </p>
         <div class="info">
             <h4 style="color: {{ page.theme-color }};display:inline;">Meal info: </h4>
             <button class="copy-btn" onclick='copyToClipboard(this, "message")'>

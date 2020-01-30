@@ -15,7 +15,7 @@
     - Name: "Jobayer"
       Balance: 75
       Noon: 1
-      Night: 0
+      Night: 1
     - Name: "Mainul"
       Balance: 335
       Noon: 1
@@ -27,7 +27,7 @@
     - Name: "Mosharraf"
       Balance: 720
       Noon: 1
-      Night: 1
+      Night: 0
     - Name: "Raju"
       Balance: 35
       Noon: 0

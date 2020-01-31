@@ -18,7 +18,7 @@
       Night: 0
     - Name: "Mainul"
       Balance: 265
-      Noon: 1
+      Noon: 0
       Night: 1
     - Name: "Milon"
       Balance: 35
@@ -30,7 +30,7 @@
       Night: 1
     - Name: "Raju"
       Balance: 35
-      Noon: 0
+      Noon: 1
       Night: 0
     - Name: "Rashed"
       Balance: 325
@@ -42,7 +42,7 @@
       Night: 0
     - Name: "Tuhin"
       Balance: 105
-      Noon: 0
+      Noon: 1
       Night: 0
 
 - Date: 2020-01-30

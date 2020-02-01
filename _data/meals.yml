@@ -1,4 +1,50 @@
 
+- Date: 2020-02-02
+  Paid: 0
+  Advance: 0
+  Due: 0
+  Peoples:
+    - Name: "Ahsan"
+      Balance: 30
+      Noon: 0
+      Night: 0
+    - Name: "Anwar"
+      Balance: 50
+      Noon: 1
+      Night: 0
+    - Name: "Jobayer"
+      Balance: 5
+      Noon: 0
+      Night: 0
+    - Name: "Mainul"
+      Balance: 230
+      Noon: 1
+      Night: 1
+    - Name: "Milon"
+      Balance: 35
+      Noon: 0
+      Night: 0
+    - Name: "Mosharraf"
+      Balance: 615
+      Noon: 1
+      Night: 1
+    - Name: "Raju"
+      Balance: 35
+      Noon: 1
+      Night: 0
+    - Name: "Rashed"
+      Balance: 325
+      Noon: 0
+      Night: 0
+    - Name: "Shanto"
+      Balance: 0
+      Noon: 0
+      Night: 0
+    - Name: "Tuhin"
+      Balance: 105
+      Noon: 1
+      Night: 0
+
 - Date: 2020-02-01
   Paid: 200
   Advance: 80

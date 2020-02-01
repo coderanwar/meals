@@ -5,11 +5,11 @@
   Due: 0
   Peoples:
     - Name: "Ahsan"
-      Balance: 30
-      Noon: 0
-      Night: 0
+      Balance: 530
+      Noon: 1
+      Night: 1
     - Name: "Anwar"
-      Balance: 50
+      Balance: 70
       Noon: 1
       Night: 0
     - Name: "Jobayer"

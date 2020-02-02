@@ -37,9 +37,9 @@
       Noon: 0
       Night: 0
     - Name: "Shanto"
-      Balance: 0
+      Balance: 50
       Noon: 0
-      Night: 0
+      Night: 1
     - Name: "Tuhin"
       Balance: 105
       Noon: 1

@@ -61,9 +61,9 @@ color: "white"
     '  Advance: ' + (paid - totalPayment) + '\n' +
     '  Due: {{ site.data.meals[0].Due }} \n' +
     '  Peoples:\n';
-  } else if (paid < totalPayment && paid > 0) {
+  } else if (paid < totalPayment && paid >= 0) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
-    '  Advance: {{ site.data.meals[0].Advance }} \n' +
+    '  Advance: 0\n' +
     '  Due: ' + (totalPayment - paid) + '\n' +
     '  Peoples:\n';
   } else {

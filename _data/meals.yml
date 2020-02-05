@@ -21,7 +21,7 @@
       Noon: 1
       Night: 1
     - Name: "Milon"
-      Balance: 35
+      Balance: 435
       Noon: 1
       Night: 0
     - Name: "Mosharraf"
@@ -34,8 +34,8 @@
       Night: 0
     - Name: "Rashed"
       Balance: 315
-      Noon: 0
-      Night: 0
+      Noon: 1
+      Night: 1
     - Name: "Shanto"
       Balance: 5
       Noon: 0

@@ -9,9 +9,9 @@
       Noon: 0
       Night: 0
     - Name: "Anwar"
-      Balance: 0
-      Noon: 0
-      Night: 0
+      Balance: 100
+      Noon: 1
+      Night: 1
     - Name: "Jobayer"
       Balance: -5
       Noon: 0

@@ -1,8 +1,8 @@
 
 - Date: 2020-02-08
-  Paid: 300
-  Advance: 0
-  Due: 280
+  Paid: 0
+  Advance: 20
+  Due: 0
   Peoples:
     - Name: "Ahsan"
       Balance: 240
@@ -46,7 +46,7 @@
       Night: 0
 
 - Date: 2020-02-06
-  Paid: 0
+  Paid: 300
   Advance: 0
   Due: 0
   Peoples:

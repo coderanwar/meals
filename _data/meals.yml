@@ -6,8 +6,8 @@
   Peoples:
     - Name: "Ahsan"
       Balance: 240
-      Noon: 0
-      Night: 0
+      Noon: 1
+      Night: 1
     - Name: "Anwar"
       Balance: 30
       Noon: 0

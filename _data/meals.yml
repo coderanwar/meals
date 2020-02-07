@@ -19,7 +19,7 @@
     - Name: "Mainul"
       Balance: 70
       Noon: 1
-      Night: 1
+      Night: 0
     - Name: "Milon"
       Balance: 400
       Noon: 1
@@ -35,7 +35,7 @@
     - Name: "Rashed"
       Balance: 245
       Noon: 1
-      Night: 1
+      Night: 0
     - Name: "Shanto"
       Balance: 5
       Noon: 0

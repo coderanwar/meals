@@ -17,7 +17,7 @@
       Noon: 0
       Night: 0
     - Name: "Mainul"
-      Balance: 100
+      Balance: 105
       Noon: 1
       Night: 0
     - Name: "Milon"
@@ -42,7 +42,7 @@
       Night: 0
     - Name: "Tuhin"
       Balance: 105
-      Noon: 0
+      Noon: 1
       Night: 0
 
 - Date: 2020-02-11

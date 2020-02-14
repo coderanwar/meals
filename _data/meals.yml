@@ -17,8 +17,8 @@
       Noon: 0
       Night: 0
     - Name: "Mainul"
-      Balance: 0
-      Noon: 0
+      Balance: 100
+      Noon: 1
       Night: 0
     - Name: "Milon"
       Balance: 330

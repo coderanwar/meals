@@ -11,7 +11,7 @@
     - Name: "Anwar"
       Balance: 215
       Noon: 1
-      Night: 0
+      Night: 1
     - Name: "Jobayer"
       Balance: 0
       Noon: 0
@@ -19,7 +19,7 @@
     - Name: "Mainul"
       Balance: 70
       Noon: 1
-      Night: 0
+      Night: 1
     - Name: "Milon"
       Balance: 330
       Noon: 0
@@ -35,7 +35,7 @@
     - Name: "Rashed"
       Balance: 500
       Noon: 1
-      Night: 0
+      Night: 1
     - Name: "Shanto"
       Balance: 5
       Noon: 0

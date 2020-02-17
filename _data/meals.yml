@@ -41,8 +41,8 @@
       Noon: 0
       Night: 0
     - Name: "Tuhin"
-      Balance: 0
-      Noon: 0
+      Balance: 200
+      Noon: 1
       Night: 0
 
 - Date: 2020-02-17

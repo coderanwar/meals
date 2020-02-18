@@ -49,7 +49,7 @@ color: "white"
   if (totalPayment <= 0) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
     '  Advance: ' + (-totalPayment) + '\n' +
-    '  Due: {{ site.data.meals[0].Due }} \n' +
+    '  Due: 0\n' +
     '  Peoples:\n';
   } else if (paid == totalPayment) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
@@ -59,7 +59,7 @@ color: "white"
   } else if (paid > totalPayment) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +
     '  Advance: ' + (paid - totalPayment) + '\n' +
-    '  Due: {{ site.data.meals[0].Due }} \n' +
+    '  Due: 0\n' +
     '  Peoples:\n';
   } else if (paid < totalPayment && paid >= 0) {
     document.getElementById("mealData").innerHTML += '  Paid: 0\n' +

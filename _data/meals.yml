@@ -17,9 +17,9 @@
       Noon: 1
       Night: 0
     - Name: "Mainul"
-      Balance: 30
-      Noon: 0
-      Night: 0
+      Balance: 130
+      Noon: 1
+      Night: 1
     - Name: "Milon"
       Balance: 330
       Noon: 0
@@ -27,7 +27,7 @@
     - Name: "Mosharraf"
       Balance: 220
       Noon: 1
-      Night: 0
+      Night: 1
     - Name: "Raju"
       Balance: 40
       Noon: 1

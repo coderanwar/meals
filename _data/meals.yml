@@ -9,12 +9,12 @@
       Noon: 0
       Night: 0
     - Name: "Anwar"
-      Balance: 40
+      Balance: 0
       Noon: 0
       Night: 0
     - Name: "Jobayer"
-      Balance: 60
-      Noon: 1
+      Balance: 30
+      Noon: 0
       Night: 0
     - Name: "Mainul"
       Balance: 60
